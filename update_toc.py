@@ -15,7 +15,7 @@ This repository contains the most common use cases and best practices in NetBrai
 
 {% for feature in features %}
 * [{{feature.name|upper}}]({{feature.name|replace(' ','%20')}}/) ({{feature.count}})
-{% endfor %}
+{%- endfor %}
 
 """
 
@@ -44,7 +44,7 @@ for root_dir in root_dir_list:
 
 readme_template = Template(root_readme_template)
 readme_txt = readme_template.render(features=dir_tree)
-#print (readme_txt)
+print (readme_txt)
 
 
 with open('_README.MD','w') as f_readme:
